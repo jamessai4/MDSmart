@@ -1,0 +1,105 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Uid</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="header-bg"></div>
+  <ion-grid fixed>
+    <ion-row class="row9">
+      <ion-col class="col9">
+        <div class="text">จัดการเวลานัด</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+
+
+    <ion-card>
+      <div style=" margin-top: 30px; margin-bottom: 30px;margin-left: 10%;">
+        <ion-label class="font" style="font-size: 30px;">ข้อมูลผู้ป่วย</ion-label>
+      </div>
+
+      <ion-grid>
+        <ion-row style="margin-left: 20px;">
+          <ion-col size="2" style="text-align: left;">
+            <ion-label class="font">ID</ion-label>
+          </ion-col>
+          <ion-col style="text-align: left;">
+            <ion-label class="font">{{db_id}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row style="margin-top: 10px; margin-left: 20px;">
+          <ion-col size="2" style="text-align: left;">
+            <ion-label class="font">ชื่อ</ion-label>
+          </ion-col>
+          <ion-col style="text-align: left;">
+            <ion-label class="font">{{db_name}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row style="margin-top: 10px; margin-left: 20px;margin-bottom: 5%;">
+          <ion-col size="2" style="text-align: left;">
+            <ion-label class="font">โทร</ion-label>
+          </ion-col>
+          <ion-col style="text-align: left;">
+            <ion-label class="font">{{db_tell}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card>
+
+    <ion-card>
+      <div style="text-align:left; margin-top: 30px; margin-bottom: 30px;margin-left: 10%;">
+        <ion-label class="font" style="font-size: 30px;">จัดการคิวนัด</ion-label>
+      </div>
+
+      <ion-grid>
+
+        <ion-row style="margin-top: 10px; margin-left: 20px;">
+          <ion-col size="4.5" style="text-align: left;margin-top:7px;">
+            <ion-label class="font">การนัดหมาย :</ion-label>
+          </ion-col>
+          <ion-col style="text-align: left; ">
+            <ion-datetime class="font" [(ngModel)]="db_date" displayFormat="DD-MMM-YY HH:mm" placeholder="ไม่มีการนัดหมาย">
+            </ion-datetime>
+          </ion-col>
+        </ion-row>
+
+        <ion-row style="margin-top: 10px; margin-left: 20px;margin-bottom: 5%;">
+          <ion-col size="4.5" style="text-align: left;margin-top:7px;">
+            <ion-label position="fixed">อาการผู้ป่วย :</ion-label>
+          </ion-col>
+
+          <ion-col style="text-align: left;">
+            <ion-input class="font" [(ngModel)]="db_symptom" placeholder="-"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" shape="round" color="warning" (click)="cancel()">
+          ยกเลิกการนัด
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" shape="round" color="danger" (click)="edit()">ยืนยัน</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" shape="round" color="success" routerLink="/manage">ย้อนกลับ</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

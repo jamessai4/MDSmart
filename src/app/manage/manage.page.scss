@@ -1,0 +1,74 @@
+.header-bg {
+  height: 120px;
+  width: 110%;
+  background: #22c1c3;
+  box-shadow: 0px 1px 10px #5b4046;
+  // transform: rotate(-8deg);
+  // border-radius: 50px 10px 10px 50px;
+  border-radius: 30%;
+  margin-left: -18px;
+  margin-top: -20px;
+  margin-bottom: 15px
+}
+
+.content {
+  // position: absolute;
+  margin-left: 30%;
+  padding-bottom: 20%;
+  // top: 30px;
+  left: 40px;
+  display: flex;
+}
+
+.text {
+  align-items: center; 
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  text-shadow: 0px 1px 10px #aaaaaa;
+}
+
+ion-col {
+  text-align: center;
+}
+
+.row9 {
+  margin-top: -100px;
+}
+
+ion-content {
+  // --ion-background-color:rgb(17,231,244,100);
+  // --ion-background-color: linear-gradient(180deg, rgba(17,231,244,100) 0%, rgba(17,121,244,100) 60%, rgba(100,17,244,100) 80%);
+  --background: url("../../assets/img/fixbg1.jpg")no-repeat center/cover fixed;
+  ;
+}
+
+ion-card {
+  border-radius: 30px;
+}
+
+p {
+  font-size: 28px;
+}
+
+ion-label {
+  font-size: 23px;
+  font-weight: bold;
+
+}
+
+ion-searchbar {
+  --border-radius: 30px;
+}
+
+.zipthom {
+  z-index: 99;
+}
+
+ion-toolbar {
+  --background: url("../../assets/img/fixbg1.jpg") no-repeat center/cover fixed;
+}
+
+ion-card {
+  --color:rgb(9, 117, 103);
+  --background:rgba(255, 255, 255, 0.658);
+}

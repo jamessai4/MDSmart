@@ -1,0 +1,94 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>DM</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+    <div class="header-bg"></div>
+    <ion-grid fixed>
+        <ion-row class="row9">
+            <ion-col class="col9">
+                <div class="text" >M.D.</div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-- <ion-col align-self-center> -->
+    <div class="buttom">
+
+        <ion-row class="row2" *ngIf="db_role == 'kratom'" >
+            <ion-col size="4" style="border-right-style: none;">
+                <div style="margin-left: 10px;">👤 Admin :</div>
+            </ion-col>
+            <ion-col style="text-align: left;">
+                <div>{{email}}</div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="row1"  *ngIf="db_role == 'user'" >
+            <ion-col size="4" style="border-right-style: none;">
+                <div style="margin-left: 10px;">👤 อีเมลผู้ใช้ :</div>
+            </ion-col>
+            <ion-col style="text-align: left;">
+                <div>{{email}}</div>
+            </ion-col>
+        </ion-row>
+
+        <!-- Slide รูปภาพ -->
+        <ion-card>
+            <ion-slides [options]="{autoplay:true}">
+                <ion-slide>
+                    <img src="../../assets/img/14.jpg" alt="">
+                </ion-slide>
+                <ion-slide>
+                    <img src="../../assets/img/15.jpg" alt="">
+                </ion-slide>
+            </ion-slides>
+        </ion-card>
+
+        <ion-grid>
+            <!----------admin------------>
+            <ion-row *ngIf="db_role == 'kratom'" >
+                <ion-col>
+                    <ion-button ion-button color="success" expand="block" shape="round" round icon-start [routerLink]="['/manage']">
+                        <!-- <ion-icon name="document-text"></ion-icon>--> 👩‍🔬จัดการคิว (Admin)
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <!--------------------------->
+            <ion-row>
+                <ion-col>
+                    <ion-button ion-button color="tertiary" expand="block" shape="round" round icon-start [routerLink]="['/profile']">
+                        <!-- <ion-icon name="document-text"></ion-icon>-->📋 ข้อมูลส่วนตัว
+                    </ion-button>
+                </ion-col>
+
+                <ion-col>
+                    <ion-button ion-button color="tertiary" expand="block" shape="round" round icon-start [routerLink]="['/queue']">
+                        <!-- <ion-icon name="create"></ion-icon>-->📅 การจองคิว
+                    </ion-button>
+                </ion-col>
+
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <ion-button ion-button color="warning" expand="block" shape="round" round icon-start [routerLink]="['/contact']">
+                        <!-- <ion-icon name="call"></ion-icon>-->📞 ติดต่อ
+                    </ion-button>
+                </ion-col>
+
+                <ion-col>
+                    <ion-button ion-button color="warning" expand="block" shape="round"round icon-start [routerLink]="['/about']">
+                        <!-- <ion-icon name="book"></ion-icon>-->🔍 เกี่ยวกับเรา
+                    </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button color="danger" expand="block" shape="round"(click)="logout()">🚪 ออกจากระบบ</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+</ion-content>

@@ -1,0 +1,71 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>ลงทะเบียน</ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+    <ion-item style="margin-top: 10px;" lines="none">
+        <div>
+            <ion-buttons class="buttonback">
+                <ion-icon name="arrow-undo" routerLink="/home"></ion-icon>
+            </ion-buttons>
+        </div>
+        <ion-label class="header" style="margin-left: 20px;">ลงทะเบียน</ion-label>
+    </ion-item>
+
+
+
+    <form class="buttom"> 
+        <!-- <ion-item lines="full"></ion-item> -->
+        <!-- <ion-item>
+      <ion-label class="font" position="floating">📝 คำนำหน้า</ion-label>
+      <ion-input class="font2" type="text" required></ion-input>
+    </ion-item> -->
+
+        <ion-item>
+            <ion-label class="font" position="floating">📝 ชื่อ-นามสกุล</ion-label>
+            <ion-input class="font2" type="text" name="name" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font" position="floating">📝 อายุ</ion-label>
+            <ion-input class="font2" type="text" name="age" [(ngModel)]="age"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font" position="floating">📝 เบอร์โทรศัพท์</ion-label>
+            <ion-input class="font2" type="text" name="age" [(ngModel)]="tell"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font" position="floating">📝 เลขบัตรประชาชน</ion-label>
+            <ion-input class="font2" type="text" name="idcard" [(ngModel)]="idcard"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font" position="floating">📧 อีเมล</ion-label>
+            <ion-input class="font2" type="text" name="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font" position="floating">🔐 รหัสผ่าน</ion-label>
+            <ion-input class="font2" type="password" name="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font" position="floating">🔐 ยืนยันรหัสผ่าน</ion-label>
+            <ion-input class="font2" type="password" name="cpassword" [(ngModel)]="cpassword"></ion-input>
+        </ion-item>
+
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit" color="danger" expand="block" shape="round" (click)="submit()">ลงทะเบียน</ion-button>
+            </ion-col>
+        </ion-row>
+
+    </form>
+</ion-content>

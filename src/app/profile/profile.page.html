@@ -1,0 +1,77 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div class="header-bg"></div>
+    <ion-grid fixed>
+        <ion-row class="row9">
+            <ion-col class="col9">
+                <div class="text">M.D.</div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- <ion-item lines="full"></ion-item> -->
+
+    <!-- <div style="margin: 10px;">
+        <ion-buttons class="buttonback">
+            <ion-icon name="arrow-undo" routerLink="/landing-page"></ion-icon>
+        </ion-buttons>
+    </div> -->
+
+    <ion-text>
+        <p>ข้อมูลส่วนตัว</p>
+    </ion-text>
+
+    <form class="buttom">
+
+        <ion-item>
+            <ion-label class="font">ชื่อ</ion-label>
+            <ion-label class="font">{{ items?.name }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font">อายุ</ion-label>
+            <ion-label class="font">{{ items?.age }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font">เลขบัตรประชาชน</ion-label>
+            <ion-label class="font">{{ items?.idcard }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font">หมายเลขผู้ป่วย</ion-label>
+            <ion-label class="font">{{ items?.uid }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font">อีเมล/เบอร์โทร</ion-label>
+            <ion-label class="font">{{ auth.user.email}}</ion-label>
+        </ion-item>
+
+        <!-- <ion-item>
+            <ion-label class="font">ที่อยู่</ion-label>
+            <ion-label class="font">{{ items?.address }}</ion-label>
+        </ion-item> -->
+
+        <ion-item>
+            <ion-label class="font">รายละเอียดอาการ</ion-label>
+            <ion-label class="font">{{ items?.symptom }}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="font">วันที่-เวลา</ion-label>
+            <ion-label class="font">{{ items?.date | date:'short' }}</ion-label>
+        </ion-item>
+
+
+        <ion-button type="submit" color="tertiary" expand="block" shape="round" style="margin-top: 10px;" routerLink="/landing-page">ย้อนกลับ</ion-button>
+    </form>
+</ion-content>

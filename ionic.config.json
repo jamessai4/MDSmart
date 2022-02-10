@@ -1,0 +1,7 @@
+{
+  "name": "MD Smart",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
